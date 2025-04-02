@@ -1,0 +1,37 @@
+* {
+    font-family: "DM Sans", serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    --vp-blue: #00a6f4;
+}
+
+.maintenance-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maintenance-content {
+    text-align: center;
+    padding: 32px;
+}
+
+.maintenance-content img {
+    max-width: 300px;
+    margin-bottom: 32px;
+}
+
+.maintenance-content p {
+    font-size: 17px;
+}
+
+.maintenance-content p a {
+    color: var(--vp-blue);
+    text-decoration: none;
+}
