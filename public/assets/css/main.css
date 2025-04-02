@@ -1,13 +1,174 @@
+@import "elements/buttons.css";
+
 * {
     font-family: "DM Sans", serif;
     box-sizing: border-box;
+}
+
+*::selection {
+    background: var(--vp-blue-hover);
+    color: #FFF;
 }
 
 html,
 body {
     height: 100%;
     margin: 0;
+    --background-grey: #f6f9fc;
+    --border: #D8D8D8;
+    --shadow-light: 0 1px 2px #0000001a;
+    --text: #000000DE;
+    --text-black: #000000;
+    --text-blue: #343c47;
+    --text-light: #0000007d;
     --vp-blue: #00a6f4;
+    --vp-blue-hover: #15b4fd;
+    font-size: 14px;
+}
+
+.navbar {
+    border-bottom: 1px solid var(--border);
+    position: fixed !important;
+    width: 100%;
+}
+
+.header {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar .navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    padding: 8px 16px;
+}
+
+.navbar .navbar-content img {
+    width: 100px;
+}
+
+.header-content {
+    width: 50%;
+    margin: auto;
+    padding: 256px 16px;
+}
+
+.header-content__text {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.header-content h1 .blue {
+    color: var(--vp-blue);
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin: 32px 0;
+}
+
+.movable
+{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: .3;
+}
+
+@keyframes rotation
+{
+    from
+    {
+        transform: rotate(0);
+    }
+
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.movable:nth-child(1)
+{
+    top: 10%;
+    left: 95%;
+    animation-duration: 5s;
+}
+
+.movable:nth-child(2)
+{
+    top: 70%;
+    left: 90%;
+    animation-duration: 8s;
+}
+
+.movable:nth-child(3)
+{
+    top: 20%;
+    left: 47%;
+    animation-duration: 6s;
+}
+
+.movable:nth-child(4)
+{
+    top: 42%;
+    left: 24%;
+    animation-duration: 3s;
+}
+
+.movable:nth-child(5)
+{
+    top: 78%;
+    left: 94%;
+    animation-duration: 6s;
+}
+
+.movable:nth-child(6)
+{
+    top: 22%;
+    left: 73%;
+    animation-duration: 5s;
+}
+
+.movable:nth-child(7)
+{
+    top: 12%;
+    left: 17%;
+    animation-duration: 4s;
+}
+
+.movable:nth-child(8)
+{
+    top: 94%;
+    left: 12%;
+    animation-duration: 4s;
+}
+
+.movable:nth-child(9)
+{
+    top: 45%;
+    left: 10%;
+    animation-duration: 6s;
+}
+
+.movable:nth-child(10)
+{
+    top: 85%;
+    left: 75%;
+    animation-duration: 6s;
 }
 
 .maintenance-container {
@@ -34,4 +195,15 @@ body {
 .maintenance-content p a {
     color: var(--vp-blue);
     text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar .navbar-content,
+    .header-content {
+        width: 100%;
+    }
+
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
 }

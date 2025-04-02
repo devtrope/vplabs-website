@@ -1,0 +1,56 @@
+button.btn,
+a.btn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: .9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    height: 2.7rem;
+    transition-duration: 0s;
+    gap: 8px;
+    box-shadow: var(--shadow-light);
+    letter-spacing: .0125rem;
+}
+
+button.btn.btn-primary,
+a.btn.btn-primary {
+    background: var(--vp-blue);
+    border: 1px solid var(--vp-blue);
+    color: #FFF;
+}
+
+button.btn.btn-primary:hover,
+a.btn.btn-primary:hover,
+button.btn.btn-outline-primary:hover,
+a.btn.btn-outline-primary:hover,
+button.btn.btn-primary:active,
+a.btn.btn-primary:active,
+button.btn.btn-outline-primary:active,
+a.btn.btn-outline-primary:active {
+    background: var(--vp-blue-hover);
+    border: 1px solid var(--vp-blue-hover);
+    color: #FFF;
+}
+
+button.btn span.material-symbols-outlined,
+a.btn span.material-symbols-outlined {
+    font-size: 1.2rem;
+}
+
+button.btn.btn-secondary,
+a.btn.btn-secondary {
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--text);
+}
+
+button.btn.btn-secondary:hover,
+a.btn.btn-secondary:hover,
+button.btn.btn-secondary:active,
+a.btn.btn-secondary:active {
+    border: 1px solid var(--border);
+    background: var(--background-grey);
+    color: var(--text);
+}
